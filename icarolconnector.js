@@ -3,19 +3,7 @@
 
   myConnector.getSchema = function (schemaCallback) {
     var cols = [{
-        id: "id",
-        dataType: tableau.dataTypeEnum.string
-    }, {
-        id: "mag",
-        alias: "magnitude",
-        dataType: tableau.dataTypeEnum.float
-    }, {
-        id: "title",
-        alias: "title",
-        dataType: tableau.dataTypeEnum.string
-    }, {
-        id: "location",
-        dataType: tableau.dataTypeEnum.geometry
+        
     }];
 
     var tableSchema = {
@@ -49,7 +37,7 @@
     tableau.registerConnector(myConnector);
     $(document).ready(function () {
     $("#submitButton").click(function () {
-        tableau.connectionName = "USGS Earthquake Feed";
+        tableau.connectionName = "Link with iCarol";
         tableau.submit();
     });
 });
